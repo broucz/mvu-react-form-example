@@ -1,0 +1,40 @@
+{
+  "name": "mvu-react-form-example",
+  "version": "0.1.0",
+  "description": "Example application using mvu-react-form & mvu-devtools",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build": "npm run clean && npm run build:webpack && mkdir -p dist && cp index.html dist",
+    "start": "node devServer.js",
+    "lint": "eslint src",
+    "gh:publish": "npm run build && cd dist && git init && git commit --allow-empty -m 'update gh-pages' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update gh-pages' && git push git@github.com:broucz/mvu-react-form-example gh-pages --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/broucz/mvu-react-form-example.git"
+  },
+  "author": "Pierre Brouca <broucapierre@gmail.com> (https://github.com/broucz)",
+  "bugs": {
+    "url": "https://github.com/broucz/mvu-react-form-example/issues"
+  },
+  "homepage": "https://github.com/broucz/mvu-react-form-example",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^5.4.7",
+    "babel-eslint": "^3.1.9",
+    "babel-loader": "^5.1.2",
+    "eslint": "^1.3.1",
+    "eslint-plugin-react": "^2.3.0",
+    "express": "^4.13.3",
+    "rimraf": "^2.4.3",
+    "webpack": "^1.9.6",
+    "webpack-dev-middleware": "^1.2.0"
+  },
+  "dependencies": {
+    "mvu-devtools": "^0.1.0",
+    "mvu-react-form": "^0.1.0",
+    "react": "0.14.0",
+    "react-dom": "0.14.0"
+  }
+}
