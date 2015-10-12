@@ -10,7 +10,7 @@ const options = {
       validate: {
         expression: /\d{5}/,
         message: {
-          advice: 'Spanish postal code is composed of 5 numbers',
+          advice: 'Spanish postal code is composed by 5 numbers',
           error: 'Try something like: 08002'
         }
       }
