@@ -5,13 +5,13 @@ const options = {
   fields: [
     {
       type: 'short_text',
-      question: 'How old are you?',
-      description: 'We would consider it for sure!',
+      question: 'What is your postal code?',
+      description: 'For sure there is something interesting around you!',
       validate: {
-        expression: /\d/,
+        expression: /\d{5}/,
         message: {
-          advice: 'Put your age using numbers',
-          error: 'I said numbers...'
+          advice: 'Spanish postal code is composed of 5 numbers',
+          error: 'Try something like: 08002'
         }
       }
     }
